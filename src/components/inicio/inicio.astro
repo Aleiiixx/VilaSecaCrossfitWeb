@@ -1,34 +1,31 @@
 ---
+import HeaderDesktop from "./header/HeaderDesktop.astro";
 
 ---
-<section class="flex flex-col w-full h-screen">
-  <header class="w-full mt-4 h-1/10">
-    <nav class="bg-gray h-24 flex flex-row w-full justify-center items-center gap-16">
-      <a href="" class="flex items-center justify-center h-full text-theme-white">INICIO</a>
-      <a href="" class="flex items-center justify-center h-full text-theme-white ">HORARIOS</a>
-      <a href="" class="flex items-center justify-center h-full text-theme-white">TARIFAS</a>
-      <img src='./icono.ico'alt="vsc rounded logo" class="h-24">
-      <a href="" class="flex items-center justify-center h-full text-theme-white">CLASES</a>
-      <a href="" class="flex items-center justify-center h-full text-theme-white">NOSOTROS</a>
-      <a href="" class="flex items-center justify-center h-full text-theme-white">CONTACTO</a>
-    </nav>
-  </header>
-  <main class="h-9/10 flex flex-row">
+<section class="relative flex flex-col w-full h-screen overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <img src="/inicioBackground.webp" alt="background" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-b from-[rgba(28,28,28,1)] via-[rgba(28,28,28,0.98)] to-[rgba(28,28,28,0.9)]"></div>
+  </div>
+
+  <HeaderDesktop/>
+
+  <main class="relative flex flex-row h-[90vh] z-10">
     <div class="h-full w-9/10 flex flex-row pl-12">
       <div class="flex flex-col justify-center">
-        <img src='./leon.webp' alt="lion logo" srcset="">
+        <img src="./leon.webp" alt="lion logo" />
       </div>
       <div class="w-9/10 h-full flex flex-col justify-center gap-12 pl-8">
         <div>
           <h1 class="md:text-6xl sm:text-4xl font-black text-theme-white">
             <span class="bg-gradient-to-r from-primary-blue to-primary-violet bg-clip-text text-transparent">
               DESCUBRE
-            </span> TU MEJOR<br>VERSION CON
-            <span class="bg-gradient-to-r from-primary-violet to-primary-blue  bg-clip-text text-transparent">CROSSFIT</span>
+            </span> TU MEJOR<br>VERSIÓN CON
+            <span class="bg-gradient-to-r from-primary-violet to-primary-blue bg-clip-text text-transparent">CROSSFIT</span>
           </h1>
         </div>
         <div>
-          <p class="text-3xl font-bold text-w text-theme-white">RESERVA TU PRIMERA CLASE AHORA</p>
+          <p class="text-3xl font-bold text-theme-white">RESERVA TU PRIMERA CLASE AHORA</p>
           <button class="bg-primary-violet px-4 py-2 rounded-sm mt-2 text-xl font-medium">RESERVAR</button>
         </div>
       </div>
