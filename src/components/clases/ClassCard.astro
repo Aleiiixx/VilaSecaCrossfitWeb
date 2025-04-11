@@ -1,0 +1,23 @@
+---
+const { titulo, descripcion, imagen } = Astro.props;
+---
+<div class=" w-[450px] h-[330px] lg:w-[480px] lg:h-[360px] flex items-center justify-center gap-4">
+    <div class="w-full h-full rounded-lg bg-gradient-to-b from-primary-blue to-primary-violet p-1 items-center justify-center ">
+        <div class="bg-theme-dark-gray h-full w-full rounded-lg">
+            <div class="h-[55%] w-full rounded-t-lg overflow-hidden">
+                <!-- Imagen -->
+                 <img src={imagen} alt="" class="w-full object-cover"/> 
+             </div>
+             <div class="h-[45%] w-full flex-col justify-center items-left pl-4 pr-4 pt-2 pb-2">
+                 <!-- Título -->
+                 <div class="text-primary-blue text-left text-2xl font-bold md:text-3xl ">
+                     {titulo}
+                 </div>
+                 <!-- Descripción -->
+                 <div class="text-theme-white text-left text-md font-normal font-sans mt-2 lg:text-lg">
+                     {descripcion}
+                 </div>
+             </div>
+        </div>  
+    </div>
+</div>
