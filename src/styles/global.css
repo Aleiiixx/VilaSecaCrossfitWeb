@@ -33,7 +33,11 @@
 
   --color-theme-white: #F0F0F0;
   --color-theme-dark-gray: #333333;
+<<<<<<< HEAD
   --color-theme-background-gray:#1C1C1C; 
+=======
+  --color-theme-background-gray:#1C1C1C;
+>>>>>>> main
 
   --breakpoint-sm: 40rem;
   --breakpoint-md: 70rem;

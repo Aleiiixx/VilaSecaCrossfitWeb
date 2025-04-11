@@ -1,0 +1,48 @@
+---
+
+---
+
+<section class="relative h-[75vh] bg-theme-white flex flex-col justify-center gap-15">
+
+  <!-- SVG para móviles (onda más suave) -->
+  <div class="absolute top-1 left-0 w-full overflow-hidden leading-[0] -translate-y-full block md:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none" class="relative block w-full h-[80px]">
+      <path fill="#F0F0F0" d="M0,20 C480,80 960,0 1440,40 L1440,80 L0,80 Z"></path>
+    </svg>
+  </div>
+
+  <!-- SVG para pantallas medianas o mayores (onda normal) -->
+  <div class="absolute top-1 left-0 w-full overflow-hidden leading-[0] -translate-y-full hidden md:block">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150" preserveAspectRatio="none" class="relative block w-full h-[150px]">
+      <path fill="#F0F0F0" d="M0,50 C360,150 1080,0 1440,100 L1440,150 L0,150 Z"></path>
+    </svg>
+  </div>
+
+  <div class="flex flex-row justify-center">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center">
+      <span class="text-[#333333]">NUESTRA</span> 
+      <span class="text-[#A591E0]">FAMILIA</span>
+    </h2>
+  </div>
+  
+  <div class="flex flex-col md:flex-row justify-center items-center gap-10 px-4 mt-8">
+    <p class="w-full md:w-1/2 max-w-2xl text-left text-lg sm:text-xl md:text-2xl lg:text-3xl">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio corrupti dicta placeat deserunt eligendi officia culpa, sapiente velit quos, earum reiciendis tenetur perspiciatis eaque fugit suscipit voluptate ullam est ex labore ipsam. Fugit nulla fugiat voluptas omnis in officia incidunt obcaecati amet ipsam. Quidem, dolor ab! Eos tenetur ex molestiae!
+    </p>
+  
+    <img 
+      src="/inicioBackground.webp" 
+      alt="Imagen grande" 
+      class="w-full sm:w-4/5 md:w-1/2 max-w-2xl h-auto object-cover rounded-md shadow-md"
+    />
+
+  </div>
+  <div class="absolute bottom-1 left-0 w-full overflow-hidden leading-[0] translate-y-full">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150" preserveAspectRatio="none" class="relative block w-full h-[100px] -scale-x-100">
+      <path fill="#F0F0F0" d="M0,0 L0,30 L1440,100 L1440,0 L0,0 Z"></path>
+    </svg>
+  </div>
+  
+</section>
+
+
