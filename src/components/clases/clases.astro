@@ -1,15 +1,16 @@
 ---
 // Clases.astro
 import ClassCard from "./ClassCard.astro"
----
-<section class="relative flex flex-col w-full h-screen overflow-hidden p-12 g-cover bg-no-repeat bg-right" style="background-image: url('/leon.webp');">
+---   
+<section id="clases" class="relative flex flex-col w-full overflow-hidden p-12 bg-no-repeat bg-right py-36 bg-[length:auto_94%] h-fit"
+style="background-image: url('/leonGris.webp');">
     <div class="flex justify-center items-center gap-4 pb-12 alling-center">
         <h2 class="flex-line">
             CLASES QUE <span class="text-primary-blue">TRANSFORMAN</span>
         </h2>
     </div>
     
-    <div class="flex flex-wrap justify-center gap-6 px-10 2xl:px-60">
+    <div class="flex flex-wrap justify-center gap-4 px-12 2xl:px-30">
         <div class="flex justify-center">
             <ClassCard
                 titulo="CROSSFIT"
@@ -21,14 +22,14 @@ import ClassCard from "./ClassCard.astro"
             <ClassCard
                 titulo="HALTEROFILIA"
                 descripcion="Entrenamiento en levantamiento de pesas centrado en desarrollar fuerza y mejorar la técnica. Con  ejercicios específicos como el clean and jerk y el snatch."
-                imagen="/crossfitCard.webp"
+                imagen="/halteroCard.webp"
             />
         </div>
         <div class="flex justify-center">
             <ClassCard
                 titulo="GYMNASTICS"
                 descripcion="Clases enfocadas en mejorar movimientos gimnasticos de CrossFit, como el pull-up y el muscle-up, desarrollando fuerza, flexibilidad y control corporal."
-                imagen="/crossfitCard.webp"
+                imagen="/gymnasticsCard.webp"
             />
         </div>
         <div class="flex justify-center">
@@ -42,11 +43,9 @@ import ClassCard from "./ClassCard.astro"
             <ClassCard
                 titulo="LONGEVIA FIT"
                 descripcion="Nunca es tarde para empezar. Un entrenamiento diseñado para mejorar tu movilidad, fuerza y equilibrio, para disfrutar de una vida activa y saludable"
-                imagen="/crossfitCard.webp"
+                imagen="/longeviafitCard.webp"
             />
         </div>
     </div>
-    
-    
     
 </section>
