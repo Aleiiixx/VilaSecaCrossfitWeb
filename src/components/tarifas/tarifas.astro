@@ -1,0 +1,45 @@
+---
+import BonoCard from "./BonoCard.astro"
+import ExtraCard from "./ExtraCard.astro"
+import PlanCard from "./PlanCard.astro"
+---
+
+<section id="clases" class="relative flex flex-col w-full overflow-hidden py-12">
+    <div class="flex justify-center items-center gap-4 p-12 alling-center">
+        <h2 class="flex-line text-theme-white">ELIGE TU BONO</h2>
+    </div>
+    <div class="flex flex-wrap justify-center gap-4 px-12 2xl:px-30">
+        <BonoCard 
+        tituloBono="DIAMOND"
+        precio="79€"
+        caracteristicas={[
+            "1 clase de MOBILITY semanal",
+            "1 clase de HALTEROFILIA semanal",
+            "7 sesiones WOD / OPEN semanales",
+            "1 clase de GYMNASTIC semanal"
+        ]}
+        />
+        <ExtraCard 
+        tituloBono="DIAMOND"
+        precio="79€"
+        caracteristicas={[
+            "1 clase de MOBILITY semanal",
+            "1 clase de HALTEROFILIA semanal",
+            "7 sesiones WOD / OPEN semanales",
+            "1 clase de GYMNASTIC semanal"
+        ]}
+        descripcionExtra="Los planes Diamond y Morning Diamond tienen disponible:"
+        />
+        <PlanCard
+        tituloBono="DIAMOND"
+        precio="79€"
+        caracteristicas={[
+            "1 clase de MOBILITY semanal",
+            "1 clase de HALTEROFILIA semanal",
+            "7 sesiones WOD / OPEN semanales",
+            "1 clase de GYMNASTIC semanal"
+        ]}
+        />
+    </div>
+    
+</section>
