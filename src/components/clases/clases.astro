@@ -2,50 +2,81 @@
 // Clases.astro
 import ClassCard from "./ClassCard.astro"
 ---   
-<section id="clases" class="relative flex flex-col w-full overflow-hidden p-12 bg-no-repeat bg-right py-36 bg-[length:auto_94%] h-fit"
-style="background-image: url('/leonGris.webp');">
-    <div class="flex justify-center items-center gap-4 pb-12 alling-center">
-        <h2 class="flex-line">
-            CLASES QUE <span class="text-primary-blue">TRANSFORMAN</span>
-        </h2>
+<section id="clases" class="relative flex flex-col w-full overflow-hidden 
+    bg-no-repeat bg-right bg-[length:auto_90%] h-fit
+    py-16 md:py-24
+    px-4 sm:px-8 xl:px-12 2xl:px-4"
+  style="background-image: url('/leonGris.webp');">
+  <div class="flex justify-center items-center gap-4 py-12 alling-center">
+    <h2 class="flex-wrap">
+      CLASES QUE <span class="text-primary-blue">TRANSFORMAN</span>
+    </h2>
+  </div>
+
+  <!-- Carrusel en móvil, cuadrícula en desktop -->
+  <div class="w-full overflow-x-auto md:overflow-x-visible">
+    <div class="flex flex-nowrap md:flex-wrap md:justify-center items-center gap-4 sm:px-8 2xl:px-18">
+      <div class="flex justify-center">
+        <ClassCard
+          titulo="CROSSFIT"
+          descripcion="Entrenamiento de alta intensidad que mejora la fuerza, resistencia cardiovascular y agilidad mediante movimientos funcionales."
+          imagen="/crossfitCard.webp"
+        />
+      </div>
+
+      <div class="flex justify-center">
+        <ClassCard
+          titulo="HALTEROFILIA"
+          descripcion="Entrenamiento en levantamiento de pesas centrado en desarrollar fuerza y mejorar la técnica. Con  ejercicios específicos como el clean and jerk y el snatch."
+          imagen="/crossfitCard.webp"
+        />
+      </div>
+
+      <div class="flex justify-center">
+        <ClassCard
+          titulo="GYMNASTICS"
+          descripcion="Clases enfocadas en mejorar movimientos gimnasticos de CrossFit, como el pull-up y el muscle-up, desarrollando fuerza, flexibilidad y control corporal."
+          imagen="/crossfitCard.webp"
+        />
+      </div>
+
+      <div class="flex justify-center">
+        <ClassCard
+          titulo="MOBILITY"
+          descripcion="Clases con Quirones para mejorar la flexibilidad y el rango de movimiento, previniendo lesiones y favoreciendo la recuperación muscular."
+          imagen="/crossfitCard.webp"
+        />
+      </div>
+
+      <div class="flex justify-center">
+        <ClassCard
+          titulo="LONGEVIA FIT"
+          descripcion="Nunca es tarde para empezar. Un entrenamiento diseñado para mejorar tu movilidad, fuerza y equilibrio, para disfrutar de una vida activa y saludable"
+          imagen="/crossfitCard.webp"
+        />
+      </div>
     </div>
-    
-    <div class="flex flex-wrap justify-center gap-4 px-12 2xl:px-30">
-        <div class="flex justify-center">
-            <ClassCard
-                titulo="CROSSFIT"
-                descripcion="Entrenamiento de alta intensidad que mejora la fuerza, resistencia cardiovascular y agilidad mediante movimientos funcionales."
-                imagen="/crossfitCard.webp"
-            />
-        </div>
-        <div class="flex justify-center">
-            <ClassCard
-                titulo="HALTEROFILIA"
-                descripcion="Entrenamiento en levantamiento de pesas centrado en desarrollar fuerza y mejorar la técnica. Con  ejercicios específicos como el clean and jerk y el snatch."
-                imagen="/crossfitCard.webp"
-            />
-        </div>
-        <div class="flex justify-center">
-            <ClassCard
-                titulo="GYMNASTICS"
-                descripcion="Clases enfocadas en mejorar movimientos gimnasticos de CrossFit, como el pull-up y el muscle-up, desarrollando fuerza, flexibilidad y control corporal."
-                imagen="/crossfitCard.webp"
-            />
-        </div>
-        <div class="flex justify-center">
-            <ClassCard
-                titulo="MOBILITY"
-                descripcion="Clases con Quirones para mejorar la flexibilidad y el rango de movimiento, previniendo lesiones y favoreciendo la recuperación muscular."
-                imagen="/crossfitCard.webp"
-            />
-        </div>
-        <div class="flex justify-center">
-            <ClassCard
-                titulo="LONGEVIA FIT"
-                descripcion="Nunca es tarde para empezar. Un entrenamiento diseñado para mejorar tu movilidad, fuerza y equilibrio, para disfrutar de una vida activa y saludable"
-                imagen="/crossfitCard.webp"
-            />
-        </div>
+</div>
+<!-- Indicadores de desplazamiento -->
+<div class="absolute inset-y-1/2 left-0 right-0 flex justify-between items-center px-4 md:hidden pointer-events-none z-10">
+
+    <!-- Flecha izquierda -->
+    <div class="w-10 h-10 bg-black/60 rounded-full p-2 text-white opacity-90 shadow-md shadow-black/30 backdrop-blur-sm">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+    </svg>
     </div>
-    
+
+    <!-- Flecha derecha -->
+    <div class="w-10 h-10 bg-black/60 rounded-full p-2 text-white opacity-90 shadow-md shadow-black/30 backdrop-blur-sm">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+    </div>
+
+</div>
+  
+  
 </section>
+
+
