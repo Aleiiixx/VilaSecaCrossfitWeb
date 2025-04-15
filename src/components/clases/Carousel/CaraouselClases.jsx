@@ -1,9 +1,15 @@
----
-// Clases.astro
-import CarouselClases from "./Carousel/CaraouselClases"
-import ClassCard from "./ClassCard";
+import React, { useEffect, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import ClassCard from '../ClassCard';
+import './CarouselClases.css';
 
-const clases = [
+const CarouselClases = () => {
+  
+    const clases = [
         {
           titulo: "CROSSFIT",
           descripcion:
@@ -35,33 +41,36 @@ const clases = [
           imagen: "/crossfitCard.webp",
         },
       ];
----
-  
-<section id="clases" class="relative flex flex-col w-full overflow-hidden 
-    bg-no-repeat bg-right bg-[length:auto_90%] h-fit
-    py-16 md:py-24
-    px-4 sm:px-8 xl:px-12 2xl:px-4"
-  style="background-image: url('/leonGris.webp');">
+      
+  return (
+    <div
+      style={{
+        width: '100%',
+        maxWidth: '900px',
+        margin: '0 auto',
+        paddingBottom: '4rem',
+        position: 'relative',
+      }}
+    >
+      <Swiper
+        spaceBetween={20}
+        slidesPerView={1}
+        pagination={{ clickable: true }}
+        navigation={true}
+        modules={[Navigation, Pagination]}
+        className="swiper-clases" // 👈 nombre único
+    >
 
-  <div class="flex justify-center items-center gap-4 py-12 alling-center">
-    <h2 class="flex-wrap">
-      CLASES QUE <span class="text-primary-blue">TRANSFORMAN</span>
-    </h2>
-  </div>
-
-    <!-- Carrusel SOLO en móvil -->
-    <div class="block md:hidden w-full">
-      <CarouselClases client:load />
+        {clases.map((miembro, index) => (
+          <SwiperSlide key={index}>
+            <div className="flex justify-center pb-8 px-12 w-full max-w-full">
+              <ClassCard {...miembro} />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
-  
-    <!-- Cards SOLO en escritorio -->
-    <div class="hidden md:flex md:flex-wrap justify-center gap-4 xl:px-12">
-      {clases.map((miembro) => (
-        <ClassCard {...miembro} />
-      ))}
-    </div>
-  </section>
-  
+  );
+};
 
-
-
+export default CarouselClases;

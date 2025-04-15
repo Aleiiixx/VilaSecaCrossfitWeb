@@ -60,7 +60,7 @@ const CarouselEquipo = () => {
         pagination={{ clickable: true }}
         navigation={true}
         modules={[Navigation, Pagination]}
-        className="mySwiper"
+        className="swiper-equipo" // 👈 nombre único
       >
         {equipo.map((miembro, index) => (
           <SwiperSlide key={index}>

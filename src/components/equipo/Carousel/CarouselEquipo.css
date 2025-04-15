@@ -1,8 +1,8 @@
-/* src/components/MyCarousel.css */
+/* CarouselEquipo.css */
 
-.swiper-pagination {
+.swiper-equipo .swiper-pagination {
   position: absolute;
-  bottom: 0; /* justo debajo del swiper */
+  bottom: 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -11,7 +11,7 @@
   z-index: 10;
 }
 
-.swiper-pagination-bullet {
+.swiper-equipo .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: var(--color-theme-violet-text);
@@ -20,21 +20,18 @@
   transition: all 0.3s ease;
 }
 
-.swiper-pagination-bullet-active {
+.swiper-equipo .swiper-pagination-bullet-active {
   background-color: var(--color-theme-violet-text);
   opacity: 1;
   transform: scale(1.2);
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: var(--color-theme-violet-text); /* o usa cualquier color personalizado, por ejemplo un Tailwind violeta */
+.swiper-equipo .swiper-button-next,
+.swiper-equipo .swiper-button-prev {
+  color: var(--color-theme-violet-text);
 }
 
-
-/* Aplica estilo a la swiper-container */
-.swiper-container {
+.swiper-equipo .swiper-container {
   width: 100%;
-  overflow: visible;  /* Asegúrate de que las diapositivas siguientes se muestren parcialmente */
+  overflow: visible;
 }
-
