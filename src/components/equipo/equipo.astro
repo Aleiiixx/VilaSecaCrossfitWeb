@@ -53,12 +53,12 @@ const equipo = [
     </div>
   
     <!-- Carrusel SOLO en móvil -->
-    <div class="block sm:hidden w-full">
+    <div class="block md:hidden w-full">
       <CarouselEquipo client:load />
     </div>
   
     <!-- Cards SOLO en escritorio -->
-    <div class="hidden sm:flex flex-wrap justify-center gap-4">
+    <div class="hidden 2xl:flex 2xl:flex-wrap justify-center gap-4 md:grid md:grid-cols-2 md:justify-items-center xl:w-full xl:grid-cols-4">
       {equipo.map((miembro) => (
         <EquipoCard {...miembro} />
       ))}

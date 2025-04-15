@@ -32,3 +32,9 @@
 }
 
 
+/* Aplica estilo a la swiper-container */
+.swiper-container {
+  width: 100%;
+  overflow: visible;  /* Asegúrate de que las diapositivas siguientes se muestren parcialmente */
+}
+

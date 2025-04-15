@@ -1,14 +1,14 @@
-// src/components/MyCarousel.jsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import EquipoCard from '../EquipoCard';
-import './CarouselEquipo.css'; // Aquí meteremos estilos personalizados para las bolitas
+import './CarouselEquipo.css';
 
 const CarouselEquipo = () => {
+  
   const equipo = [
     {
       nombre: 'Lu',
@@ -50,19 +50,21 @@ const CarouselEquipo = () => {
         width: '100%',
         maxWidth: '900px',
         margin: '0 auto',
-        paddingBottom: '4rem', // más espacio para que quepan las bolitas
-        position: 'relative',  // importante para ubicar la paginación
+        paddingBottom: '4rem',
+        position: 'relative',
       }}
     >
       <Swiper
         spaceBetween={20}
         slidesPerView={1}
         pagination={{ clickable: true }}
+        navigation={true}
         modules={[Navigation, Pagination]}
+        className="mySwiper"
       >
         {equipo.map((miembro, index) => (
           <SwiperSlide key={index}>
-            <div className="flex justify-center pb-8">
+            <div className="flex justify-center pb-8 px-12 w-full max-w-full">
               <EquipoCard {...miembro} />
             </div>
           </SwiperSlide>
