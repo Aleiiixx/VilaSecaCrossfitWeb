@@ -38,7 +38,7 @@ const equipo = [
   ];
 ---
 
-<section id="clases" class="relative h-fit w-full flex flex-col py-12 px-4 md:py-16 md:px-12 lg:px-8 bg-theme-white justify-center items-center">
+<section id="clases" class="relative flex flex-col w-full overflow-hidden h-fit bg-theme-white py-16 md:py-24 px-4 sm:px-8 xl:px-12 2xl:px-4">
     <div class="flex justify-center items-center gap-4 py-12">
       <h2 class="flex-wrap text-theme-dark-gray">
         <span class="text-theme-dark">NUESTRO</span>
@@ -52,7 +52,7 @@ const equipo = [
     </div>
   
     <!-- Cards SOLO en escritorio -->
-    <div class="hidden 2xl:flex 2xl:flex-wrap justify-center gap-4 md:grid md:grid-cols-2 md:justify-items-center xl:w-full xl:grid-cols-4">
+    <div class="hidden 2xl:flex 2xl:flex-wrap justify-center md:grid md:grid-cols-2 md:justify-items-center xl:w-full xl:grid-cols-4">
       {equipo.map((miembro) => (
         <EquipoCard {...miembro} />
       ))}
