@@ -14,14 +14,21 @@
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: #c084fc;
+  background-color: var(--color-theme-violet-text);
   opacity: 0.5;
   border-radius: 50%;
   transition: all 0.3s ease;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #a855f7;
+  background-color: var(--color-theme-violet-text);
   opacity: 1;
   transform: scale(1.2);
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color-theme-violet-text); /* o usa cualquier color personalizado, por ejemplo un Tailwind violeta */
+}
+
+

@@ -3,7 +3,7 @@ import React from 'react';
 
 const EquipoCard = ({ nombre, descripcion, rol, imagen, especialidades, imagenClasses }) => {
   return (
-    <div className="flex flex-col items-center w-full min-w-[330px] max-h-[500px] max-w-[330px] bg-theme-dark-gray shadow-xl rounded-2xl overflow-hidden">
+    <div className="flex flex-col items-center w-full min-w-[330px] max-h-[500px] max-w-[330px] bg-theme-dark-gray rounded-2xl overflow-hidden">
       {/* Imagen del coach */}
       <img
         className={`w-full h-[250px] object-cover ${imagenClasses}`}

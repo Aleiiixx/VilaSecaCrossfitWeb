@@ -1,44 +1,67 @@
 ---
 import CarouselEquipo from "./Carousel/CarouselEquipo"
+import EquipoCard from "./EquipoCard";
+
+const equipo = [
+    {
+      nombre: 'Lu',
+      descripcion: 'Coach de vida y experto en desarrollo personal.',
+      rol: 'Head Coach & Co-Owner',
+      imagen: '/lu.webp',
+      especialidades: ['Crossfit L2', 'Halterofilia', 'Gymnastics'],
+      imagenClasses: '',
+    },
+    {
+      nombre: 'Sergi',
+      descripcion: 'Coach de vida y experto en desarrollo personal.',
+      rol: 'Co-Owner',
+      imagen: '/sergi.webp',
+      especialidades: ['Crossfit', 'Halterofilia', 'Gymnastics'],
+      imagenClasses: '',
+    },
+    {
+      nombre: 'Saray',
+      descripcion: 'Coach de vida y experto en desarrollo personal.',
+      rol: 'Coach',
+      imagen: '/saray.webp',
+      especialidades: ['Crossfit', 'Halterofilia', 'Gymnastics'],
+      imagenClasses: '',
+    },
+    {
+      nombre: 'Borja',
+      descripcion: 'Coach de vida y experto en desarrollo personal.',
+      rol: 'Coach',
+      imagen: '/borja.webp',
+      especialidades: ['Crossfit', 'Halterofilia', 'Gymnastics'],
+      imagenClasses: 'top-50',
+    },
+  ];
 ---
 
-<section id="clases" class="relative h-fit w-full flex flex-col py-12 px-12 lg:py-8 lg:px-8  bg-theme-white justyfy-center items-center">
-    <div class="flex justify-center items-center gap-4 py-12 alling-center">
-        <h2 class="flex-wrap text-theme-dark-gray">
-            <span class="text-theme-dark">NUESTRO</span>
-            <span class="text-theme-violet-text">EQUIPO</span>
-        </h2>
+<section id="clases" class="relative h-fit w-full flex flex-col py-12 px-4 md:py-16 md:px-12 lg:px-8 
+  bg-theme-white 
+  sm:bg-red-200 
+  md:bg-blue-300 
+  lg:bg-green-400 
+  xl:bg-purple-500
+  justify-center items-center">
+    <div class="flex justify-center items-center gap-4 py-12">
+      <h2 class="flex-wrap text-theme-dark-gray">
+        <span class="text-theme-dark">NUESTRO</span>
+        <span class="text-theme-violet-text">EQUIPO</span>
+      </h2>
     </div>
-    <CarouselEquipo client:load/>
-    <!-- <div class="flex flex-wrap justify-center gap-4 ">
-        <EquipoCard
-            nombre="Lu"
-            descripcion="Coach de vida y experto en desarrollo personal."
-            rol="Head Coach"
-            imagen="/lu.webp"
-            especialidades={["Crossfit L2", "Halterofilia", "Gymnastics"]}
-            imagenClasses=""/>
-        <EquipoCard
-            nombre="Sergi"
-            descripcion="Coach de vida y experto en desarrollo personal."
-            rol="Head Coach"
-            imagen="/sergi.webp"
-            especialidades={["Crossfit", "Halterofilia", "Gymnastics"]}
-            imagenClasses=""/>
-        <EquipoCard
-            nombre="Saray"
-            descripcion="Coach de vida y experto en desarrollo personal."
-            rol="Head Coach"
-            imagen="/saray.webp"
-            especialidades={["Crossfit", "Halterofilia", "Gymnastics"]}
-            imagenClasses=""/>
-        <EquipoCard
-            nombre="Borja"
-            descripcion="Coach de vida y experto en desarrollo personal."
-            rol="Head Coach"
-            imagen="/borja.webp"
-            especialidades={["Crossfit", "Halterofilia", "Gymnastics"]}
-            imagenClasses="top-50"/>
-   </div> -->
-    
-</section>
+  
+    <!-- Carrusel SOLO en móvil -->
+    <div class="block sm:hidden w-full">
+      <CarouselEquipo client:load />
+    </div>
+  
+    <!-- Cards SOLO en escritorio -->
+    <div class="hidden sm:flex flex-wrap justify-center gap-4">
+      {equipo.map((miembro) => (
+        <EquipoCard {...miembro} />
+      ))}
+    </div>
+  </section>
+  
