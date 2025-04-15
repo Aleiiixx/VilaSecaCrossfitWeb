@@ -3,7 +3,7 @@ import React from 'react';
 
 const EquipoCard = ({ nombre, descripcion, rol, imagen, especialidades, imagenClasses }) => {
   return (
-    <div className="flex flex-col items-center w-[200px] bg-theme-dark-gray shadow-xl rounded-2xl overflow-hidden">
+    <div className="w-full max-w-[280px] h-[450px] sm:max-w-[300px] sm:h-[300px] flex flex-col items-center bg-theme-dark-gray shadow-lg rounded-2xl overflow-hidden">
       {/* Imagen del coach */}
       <img
         className={`w-full h-[250px] object-cover ${imagenClasses}`}
@@ -37,5 +37,4 @@ const EquipoCard = ({ nombre, descripcion, rol, imagen, especialidades, imagenCl
     </div>
   );
 };
-
 export default EquipoCard;
