@@ -56,15 +56,29 @@ const CarouselEquipo = () => {
     >
       <Swiper
         spaceBetween={20}
-        slidesPerView={1}
+        slidesPerView="auto"
+        centeredSlides={true}
+        grabCursor={true}
         pagination={{ clickable: true }}
         navigation={true}
         modules={[Navigation, Pagination]}
-        className="swiper-equipo" // 👈 nombre único
+        className="swiper-equipo" 
+        breakpoints={{
+          0: {
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 16,
+          },
+          640: {
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 20,
+          },
+        }}
       >
         {equipo.map((miembro, index) => (
           <SwiperSlide key={index}>
-            <div className="flex justify-center pb-8 px-12 w-full max-w-full">
+            <div className="flex justify-center pb-8 px-4 w-full">
               <EquipoCard {...miembro} />
             </div>
           </SwiperSlide>

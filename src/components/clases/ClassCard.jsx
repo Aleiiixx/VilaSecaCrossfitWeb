@@ -2,7 +2,8 @@ import React from "react";
 
 const ClassCard = ({ titulo, descripcion, imagen }) => {
   return (
-    <div className="w-[70vw] h-[360px] sm:w-[400px] sm:h-[300px] xl:w-[380px] xl:h-[320px] 2xl:w-[440px] 2xl:h-[320px] flex flex-col items-center bg-gradient-to-b from-primary-blue to-primary-violet p-1 shadow-lg rounded-2xl overflow-hidden">
+    <div className="w-full max-w-[280px] h-[360px] sm:max-w-[300px] sm:h-[300px] flex flex-col items-center bg-gradient-to-b from-primary-blue to-primary-violet p-1 shadow-lg rounded-2xl overflow-hidden">
+
       <div className="bg-theme-dark-gray w-full h-full rounded-2xl">
         {/* Imagen del coach */}
         <img src={imagen} alt="" className="w-full h-[55%] object-cover rounded-t-2xl" />
