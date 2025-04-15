@@ -32,6 +32,8 @@
 
   --color-theme-white: #F0F0F0;
   --color-theme-light-gray: #D9D9D9;
+  --color-theme-form-gray: #636363;
+  --color-theme-form-black: #212121;
   --color-theme-dark-gray: #333333;
   --color-theme-background-gray:#1C1C1C; 
   --color-theme-violet-text: #A591E0;
@@ -61,4 +63,8 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+}
+
+.font-ari {
+  font-family: Arial, sans-serif;
 }
