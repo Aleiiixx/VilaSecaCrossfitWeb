@@ -1,5 +1,6 @@
 ---
 // Clases.astro
+import CarouselTarifas from "@components/tarifas/Carousel/CarouselTarifas";
 import CarouselClases from "./Carousel/CaraouselClases"
 import ClassCard from "./ClassCard";
 
@@ -37,21 +38,29 @@ const clases = [
       ];
 ---
   
-<section id="clases" class="relative flex flex-col w-full overflow-hidden 
-    bg-no-repeat bg-right bg-[length:auto_90%] h-fit
+<section class="relative flex flex-col w-full overflow-hidden 
+    bg-no-repeat bg-right bg-[length:auto_90%] h-fit min-h-screen max-h-full
     py-16 md:py-24 
     px-4 sm:px-8 xl:px-12 "
   style="background-image: url('/leonGris.webp');">
 
-  <div class="flex justify-center items-center gap-4 py-12 alling-center">
+  <div id="clases" class="flex justify-center items-center gap-4 pt-20 pb-4 sm:py-12 alling-center">
     <h2 class="flex-wrap">
       CLASES QUE <span class="text-primary-blue">TRANSFORMAN</span>
     </h2>
   </div>
 
     <!-- Carrusel SOLO en móvil -->
-    <div class="block md:hidden w-full">
-      <CarouselClases client:load />
+    <div class="block md:hidden w-full h-[400px]">
+      <!-- <CarouselClases client:load /> -->
+      <CarouselTarifas
+          components={[
+             clases.map((miembro) => (
+              <ClassCard {...miembro} />
+            ))
+          ]}
+        client:load
+        />
     </div>
   
     <!-- Cards SOLO en escritorio -->
