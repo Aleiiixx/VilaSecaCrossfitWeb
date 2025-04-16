@@ -38,14 +38,14 @@ const clases = [
 const Clases = () => {
   return (
     <section
-      className="relative flex flex-col w-full overflow-hidden 
-        bg-no-repeat bg-right bg-[length:auto_90%] h-fit min-h-screen max-h-full
-        py-16 md:py-24 px-4 sm:px-8 xl:px-12"
+      className="relative flex flex-col w-full overflow-hidden justify-center
+        bg-no-repeat bg-right bg-[length:auto_90%] min-h-[90vh] max-h-full
+        sm:py-16 md:py-24 px-4 sm:px-8 xl:px-12"
       style={{ backgroundImage: "url('/leonGris.webp')" }}
     >
       <div
         id="clases"
-        className="flex justify-center items-center gap-4 pt-20 pb-4 sm:py-12 alling-center"
+        className="flex justify-center items-center gap-4 pb-8 sm:py-12 alling-center"
       >
         <h2 className="flex-wrap">
           CLASES QUE <span className="text-primary-blue">TRANSFORMAN</span>
