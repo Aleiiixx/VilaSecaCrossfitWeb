@@ -6,6 +6,26 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './Carousel.css';
 
+const generateBreakpoints = () => {
+  const breakpoints = {};
+  for (let width = 400; width <= 1024; width += 8) {
+    const progress = (width - 400) / (1024 - 400);
+
+    // slidesPerView sigue creciendo de 1.2 a 2.2
+    const slides = 1.2 + progress * (2.2 - 1.2);
+
+    // Reducimos spaceBetween mucho más: de 4 a 10
+    const space = 4 + progress * (10 - 4);
+
+    breakpoints[width] = {
+      slidesPerView: parseFloat(slides.toFixed(2)),
+      spaceBetween: parseInt(space.toFixed(0)),
+      centeredSlides: true,
+    };
+  }
+  return breakpoints;
+};
+
 const CarouselTarifas = ({ components, theme = 'violet' }) => {
   return (
     <div
@@ -26,29 +46,7 @@ const CarouselTarifas = ({ components, theme = 'violet' }) => {
         navigation={true}
         modules={[Navigation, Pagination]}
         className={`swiper ${theme}`}
-        breakpoints={{
-          400: {
-            slidesPerView: 1.3,
-            spaceBetween: 16,
-          },
-          450: {
-            slidesPerView: 1.5,
-            spaceBetween: 16,
-          },
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 32,
-          },
-          768: {
-            slidesPerView: 2.5,
-            spaceBetween: 32,
-          },
-          1024: {
-            slidesPerView: 2,
-            spaceBetween: 32,
-            centeredSlides: true,
-          },
-        }}
+        breakpoints={generateBreakpoints()}
       >
         {components.map((element, index) => (
           <SwiperSlide key={index}>
