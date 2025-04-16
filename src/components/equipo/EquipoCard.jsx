@@ -10,13 +10,13 @@ const EquipoCard = ({ nombre, descripcion, rol, imagen, especialidades, imagenCl
     flex flex-col bg-theme-dark-gray shadow-lg rounded-2xl overflow-hidden">
       {/* Imagen del coach */}
       <img
-        className={`w-full h-[230px] sm:h-[250px] object-cover ${imagenClasses}`}
+        className={`w-full h-[230px] sm:h-[270px] object-cover ${imagenClasses}`}
         src={imagen}
         alt={nombre}
       />
 
       {/* Contenido */}
-      <div className="flex flex-col w-full h-[230px] py-4 px-2 sm:px-4 gap-4 justify-between 2xl:py-0 2xl:pt-2">
+      <div className="flex flex-col w-full h-[210px] py-4 px-2 sm:px-4 gap-4 justify-between 2xl:py-0 2xl:pt-2">
         {/* Nombre, rol y descripción */}
         <div className="flex flex-col gap-2 px-2 2xl:h-[170px]">
           <h3 className="text-3xl font-bold text-primary text-theme-white text-left">{nombre}</h3>
