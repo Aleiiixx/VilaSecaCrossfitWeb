@@ -1,6 +1,6 @@
 /* CarouselEquipo.css (manteniendo TODO tu estilo original) */
 
-.swiper-tarifas .swiper-pagination {
+.swiper .swiper-pagination {
   position: absolute;
   bottom: 1px; /* antes era 0 */
   width: 100%;
@@ -10,7 +10,7 @@
   z-index: 10;
 }
 
-.swiper-tarifas .swiper-pagination-bullet {
+.swiper .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   opacity: 0.5;
@@ -18,43 +18,43 @@
   transition: all 0.3s ease;
 }
 
-.swiper-tarifas .swiper-pagination-bullet-active {
+.swiper .swiper-pagination-bullet-active {
   opacity: 1;
   transform: scale(1.2);
 }
 
-.swiper-tarifas .swiper-button-next,
-.swiper-tarifas .swiper-button-prev {
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
   color: var(--color-theme-violet-text);
 }
 
-.swiper-tarifas .swiper-container {
+.swiper .swiper-container {
   width: 100%;
   overflow: visible;
 }
 
 /* 👇 Temas de color extra */
 
-.swiper-tarifas.violet .swiper-pagination-bullet,
-.swiper-tarifas.violet .swiper-pagination-bullet-active,
-.swiper-tarifas.violet .swiper-button-next,
-.swiper-tarifas.violet .swiper-button-prev {
+.swiper.violet .swiper-pagination-bullet,
+.swiper.violet .swiper-pagination-bullet-active,
+.swiper.violet .swiper-button-next,
+.swiper.violet .swiper-button-prev {
   /* background-color: var(--color-theme-violet-text); */
   color: var(--color-theme-violet-text);
 }
 
-.swiper-tarifas.blue .swiper-pagination-bullet,
-.swiper-tarifas.blue .swiper-pagination-bullet-active,
-.swiper-tarifas.blue .swiper-button-next,
-.swiper-tarifas.blue .swiper-button-prev {
+.swiper.blue .swiper-pagination-bullet,
+.swiper.blue .swiper-pagination-bullet-active,
+.swiper.blue .swiper-button-next,
+.swiper.blue .swiper-button-prev {
   /* background-color: var(--color-theme-blue-text); */
   color: var(--color-primary-blue);
 }
 
-.swiper-tarifas.violet .swiper-pagination-bullet {
+.swiper.violet .swiper-pagination-bullet {
   background-color: var(--color-primary-violet);
 }
 
-.swiper-tarifas.blue .swiper-pagination-bullet {
+.swiper.blue .swiper-pagination-bullet {
   background-color: var(--color-primary-blue);
 }

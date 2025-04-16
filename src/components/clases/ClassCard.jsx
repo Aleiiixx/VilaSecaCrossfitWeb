@@ -2,21 +2,21 @@ import React from "react";
 
 const ClassCard = ({ titulo, descripcion, imagen }) => {
   return (
-    <div className=" w-[280px] h-[360px] 
-    sm:w-[400px] sm:h-[300px] 
-    2xl:w-[450px] 2xl:h-[350px] 
+    <div className=" w-[280px] h-[390px] 
+    sm:w-[400px] sm:h-[330px] 
+    2xl:w-[450px] 2xl:h-[380px] 
     flex flex-col 
     bg-gradient-to-b from-primary-blue to-primary-violet 
-    p-1 shadow-lg rounded-2xl overflow-hidden">
+    p-0.5 shadow-lg rounded-2xl overflow-hidden">
 
       <div className="bg-theme-dark-gray w-full h-full rounded-2xl">
         {/* Imagen del coach */}
-        <img src={imagen} alt="" className="w-full h-[55%] object-cover rounded-t-2xl" />
+        <img src={imagen} alt="" className="w-full h-[65%] object-cover rounded-t-2xl" />
 
         {/* Contenido */}
-        <div className="flex flex-col w-full py-2 px-6 gap-4">
+        <div className="flex flex-col w-full py-2 px-6">
           {/* Nombre, rol y descripción */}
-          <div className="flex flex-col gap-2 h-fit">
+          <div className="flex flex-col gap-1 h-fit">
             <h3 className="text-2xl sm:text-3xl font-bold text-primary text-primary-blue text-left">
               {titulo}
             </h3>

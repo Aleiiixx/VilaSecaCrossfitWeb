@@ -1,6 +1,6 @@
 import React from 'react';
 import BonoCard from './BonoCard';
-import CarouselTarifas from './Carousel/CarouselTarifas';
+import CarouselTarifas from '../Carousel/Carousel';
 import ExtraCard from './ExtraCard';
 import PlanCard from './PlanCard';
 

@@ -4,7 +4,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import './CarouselTarifas.css';
+import './Carousel.css';
 
 const CarouselTarifas = ({ components, theme = 'violet' }) => {
   return (
@@ -25,7 +25,7 @@ const CarouselTarifas = ({ components, theme = 'violet' }) => {
         pagination={{ clickable: true }}
         navigation={true}
         modules={[Navigation, Pagination]}
-        className={`swiper-tarifas ${theme}`}
+        className={`swiper ${theme}`}
         breakpoints={{
           400: {
             slidesPerView: 1.3,
