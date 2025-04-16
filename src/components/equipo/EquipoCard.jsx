@@ -3,31 +3,35 @@ import React from 'react';
 
 const EquipoCard = ({ nombre, descripcion, rol, imagen, especialidades, imagenClasses }) => {
   return (
-    <div className="w-full max-w-[280px] h-[450px] sm:max-w-[300px] sm:h-[300px] flex flex-col items-center bg-theme-dark-gray shadow-lg rounded-2xl overflow-hidden">
+    <div className=" h-[460px] sm:h-[480px]  
+    sm:w-[300px] 
+    md:w-[330px]
+    2xl:w-[290px] 2xl:h-[500px]
+    flex flex-col bg-theme-dark-gray shadow-lg rounded-2xl overflow-hidden">
       {/* Imagen del coach */}
       <img
-        className={`w-full h-[250px] object-cover ${imagenClasses}`}
+        className={`w-full h-[230px] sm:h-[250px] object-cover ${imagenClasses}`}
         src={imagen}
         alt={nombre}
       />
 
       {/* Contenido */}
-      <div className="flex flex-col w-full py-4 px-6 gap-4">
+      <div className="flex flex-col w-full h-[230px] py-4 px-2 sm:px-4 gap-4 justify-between 2xl:py-0 2xl:pt-2">
         {/* Nombre, rol y descripción */}
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 px-2 2xl:h-[170px]">
           <h3 className="text-3xl font-bold text-primary text-theme-white text-left">{nombre}</h3>
           <div className="text-sm text-primary-blue tracking-wide">{rol}</div>
-          <div className="text-sm text-theme-white font-sans">{descripcion}</div>
+          <div className="text-sm text-theme-white font-sans md:text-base">{descripcion}</div>
         </div>
 
         {/* Especialidades */}
-        <div className="flex flex-wrap justify-between gap-1 w-full px-1">
+        <div className="flex flex-wrap justify-between w-full gap-1">
           {especialidades.map((spec, i) => (
             <div
               key={i}
-              className="flex items-center justify-center gap-2 px-3 py-1 bg-theme-background-gray rounded-full text-sm font-medium"
+              className="bg-theme-background-gray rounded-full px-2"
             >
-              <span className="flex justify-center items-center w-full text-center text-theme-light-gray font-sans text-xs">
+              <span className="text-theme-light-gray font-sans text-xs sm:text-[13px] md:text-[15px] xl:text-sm ">
                 {spec}
               </span>
             </div>
