@@ -2,8 +2,8 @@
 import Layout from '@layouts/Layout.astro';
 import Familia from '@components/familia/familia.astro';
 import Inicio from '@components/inicio/Inicio.astro';
-import Clases from '@components/clases/clases.astro';
-import Equipo from '@components/equipo/equipo.astro';
+import Clases from '@components/clases/clases.jsx';
+import Equipo from '@components/equipo/equipo.jsx';
 import Tarifas from '@components/tarifas/tarifas.jsx';  
 import Footer from '@components/footer/footer.astro';
 import Horario from '@components/horario/horario.astro';
@@ -15,8 +15,8 @@ import Horario from '@components/horario/horario.astro';
 <Layout>
   <Inicio/>
   <Familia/>
-  <Clases/>
-  <Equipo/>
+  <Clases client:load/>
+  <Equipo client:load/>
   <Tarifas client:load/>
   <Horario/>
   <Footer/>
