@@ -66,8 +66,8 @@ const CarouselClases = () => {
         }}
       >
         {clases.map((miembro, index) => (
-          <SwiperSlide key={index} className="!w-[280px] sm:!w-[300px]">
-            <div className="flex justify-center pb-8 px-2 w-full">
+          <SwiperSlide key={index} className="!w-[280px] sm:!w-[400px] pb-8">
+            <div className="flex justify-center px-2 w-full">
               <ClassCard {...miembro} />
             </div>
           </SwiperSlide>

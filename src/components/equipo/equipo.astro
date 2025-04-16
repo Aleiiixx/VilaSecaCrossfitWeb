@@ -5,7 +5,7 @@ import EquipoCard from "./EquipoCard";
 const equipo = [
     {
       nombre: 'Lu',
-      descripcion: 'Coach de vida y experto en desarrollo personal.',
+      descripcion: 'Responsable del entrenamiento en el box. Co-Owner, atleta de CrossFit… y la culpable de que sufras en cada WOD.',
       rol: 'Head Coach & Co-Owner',
       imagen: '/lu.webp',
       especialidades: ['Crossfit L2', 'Halterofilia', 'Gymnastics'],
@@ -13,7 +13,7 @@ const equipo = [
     },
     {
       nombre: 'Sergi',
-      descripcion: 'Coach de vida y experto en desarrollo personal.',
+      descripcion: 'Co-Owner del box. Le encontrarás entrenando, ayudando… o metiéndose contigo (con cariño).',
       rol: 'Co-Owner',
       imagen: '/sergi.webp',
       especialidades: ['Crossfit', 'Halterofilia', 'Gymnastics'],
@@ -21,7 +21,7 @@ const equipo = [
     },
     {
       nombre: 'Saray',
-      descripcion: 'Coach de vida y experto en desarrollo personal.',
+      descripcion: 'Saray, la Srta. Inkisidora. Coach del box, siempre dispuesta a ayudarte a mejorar cada día.',
       rol: 'Coach',
       imagen: '/saray.webp',
       especialidades: ['Crossfit', 'Halterofilia', 'Gymnastics'],
@@ -29,7 +29,15 @@ const equipo = [
     },
     {
       nombre: 'Borja',
-      descripcion: 'Coach de vida y experto en desarrollo personal.',
+      descripcion: 'Coach del box, siempre dispuesto a ayudarte a mejorar cada día.',
+      rol: 'Coach',
+      imagen: '/borja.webp',
+      especialidades: ['Crossfit', 'Halterofilia', 'Gymnastics'],
+      imagenClasses: 'top-50',
+    },
+    {
+      nombre: 'Vanessa',
+      descripcion: 'Mobility Coach y experta en movilidad.',
       rol: 'Coach',
       imagen: '/borja.webp',
       especialidades: ['Crossfit', 'Halterofilia', 'Gymnastics'],
@@ -38,8 +46,10 @@ const equipo = [
   ];
 ---
 
-<section id="clases" class="relative flex flex-col w-full overflow-hidden h-fit bg-theme-white py-16 md:py-24 px-4 sm:px-8 xl:px-12 2xl:px-4">
-    <div class="flex justify-center items-center gap-4 py-12">
+<section id="clases" class="relative flex flex-col w-full overflow-hidden 2xl:bg-amber-300 bg-[#F0F0F0] min-h-screen
+       px-4 sm:px-8 xl:px-18 2xl:px-4 
+       py-12 md:py-20">
+    <div class="flex justify-center py-2 sm:gap-4 sm:py-12">
       <h2 class="flex-wrap text-theme-dark-gray">
         <span class="text-theme-dark">NUESTRO</span>
         <span class="text-theme-violet-text">EQUIPO</span>
@@ -52,7 +62,7 @@ const equipo = [
     </div>
   
     <!-- Cards SOLO en escritorio -->
-    <div class="hidden 2xl:flex 2xl:flex-wrap justify-center md:grid md:grid-cols-2 md:justify-items-center xl:w-full xl:grid-cols-4">
+    <div class="hidden md:flex md:flex-wrap md:justify-center md:w-full md:px-8 md:gap-6 2xl:gap-4 2xl:px-40 ">
       {equipo.map((miembro) => (
         <EquipoCard {...miembro} />
       ))}
