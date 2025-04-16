@@ -38,14 +38,7 @@ const equipo = [
     especialidades: ["Crossfit", "Halterofilia", "Gymnastics"],
     imagenClasses: "top-50",
   },
-  {
-    nombre: "Vanessa",
-    descripcion: "Mobility Coach y experta en movilidad.",
-    rol: "Coach",
-    imagen: "/borja.webp",
-    especialidades: ["Crossfit", "Halterofilia", "Gymnastics"],
-    imagenClasses: "top-50",
-  },
+  
 ];
 
 const Equipo = () => {
@@ -55,7 +48,7 @@ const Equipo = () => {
       className="relative flex flex-col w-full overflow-hidden bg-[#F0F0F0] min-h-[90vh] max-h-full justify-center
         px-4 sm:px-8 xl:px-18 2xl:px-4 sm:py-16 md:py-20"
     >
-      <div className="flex justify-center py-2 sm:gap-4 sm:py-12">
+      <div className="flex justify-center pb-2 sm:gap-4 sm:pb-12">
         <h2 className="flex-wrap text-theme-dark-gray">
           <span className="text-theme-dark">NUESTRO</span>{" "}
           <span className="text-theme-violet-text">EQUIPO</span>
