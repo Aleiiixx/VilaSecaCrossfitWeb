@@ -1,0 +1,28 @@
+---
+import Calendario from '@components/horario/Calendario/Calendario'
+---
+
+<section class="bg-theme-light-gray relative pt-8 pb-8">
+
+  <!-- SVG para móviles (onda más suave) volteado horizontalmente -->
+  <div class="absolute top-1 left-0 w-full overflow-hidden leading-[0] -translate-y-full block md:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none" class="relative block w-full h-[80px]">
+      <g transform="scale(-1,1) translate(-1440,0)">
+        <path fill="#D9D9D9" d="M0,20 C480,80 960,0 1440,40 L1440,80 L0,80 Z"></path>
+      </g>
+    </svg>
+  </div>
+
+  <!-- SVG para pantallas medianas o mayores (onda normal) volteado horizontalmente -->
+  <div class="absolute top-1 left-0 w-full overflow-hidden leading-[0] -translate-y-full hidden md:block">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150" preserveAspectRatio="none" class="relative block w-full h-[150px]">
+      <g transform="scale(-1,1) translate(-1440,0)">
+        <path fill="#D9D9D9" d="M0,50 C360,150 1080,0 1440,100 L1440,150 L0,150 Z"></path>
+      </g>
+    </svg>
+  </div>
+
+  <h2 class="text-theme-violet-text">HORARIO</h2>
+
+  <Calendario/>
+</section>
