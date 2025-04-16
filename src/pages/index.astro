@@ -4,7 +4,7 @@ import Familia from '@components/familia/familia.astro';
 import Inicio from '@components/inicio/Inicio.astro';
 import Clases from '@components/clases/clases.astro';
 import Equipo from '@components/equipo/equipo.astro';
-import Tarifas from '@components/tarifas/tarifas.astro';  
+import Tarifas from '@components/tarifas/tarifas.jsx';  
 import Footer from '@components/footer/footer.astro';
 import Horario from '@components/horario/horario.astro';
 
@@ -17,7 +17,7 @@ import Horario from '@components/horario/horario.astro';
   <Familia/>
   <Clases/>
   <Equipo/>
-  <Tarifas/>
+  <Tarifas client:load/>
   <Horario/>
   <Footer/>
 </Layout>
