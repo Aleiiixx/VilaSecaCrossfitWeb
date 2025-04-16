@@ -18,21 +18,40 @@ const CarouselTarifas = ({ components, theme = 'violet' }) => {
       }}
     >
       <Swiper
-        spaceBetween={1}
-        slidesPerView="auto"
+        spaceBetween={16}
+        slidesPerView={1.2}
         centeredSlides={true}
         grabCursor={true}
         pagination={{ clickable: true }}
         navigation={true}
         modules={[Navigation, Pagination]}
-        className={`swiper-tarifas ${theme}`} // 👈 Aquí se inyecta el tema
+        className={`swiper-tarifas ${theme}`}
         breakpoints={{
-          0: { slidesPerView: 'auto', centeredSlides: true },
-          640: { slidesPerView: 'auto', centeredSlides: true },
+          400: {
+            slidesPerView: 1.3,
+            spaceBetween: 16,
+          },
+          450: {
+            slidesPerView: 1.5,
+            spaceBetween: 16,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 32,
+          },
+          768: {
+            slidesPerView: 2.5,
+            spaceBetween: 32,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 32,
+            centeredSlides: true,
+          },
         }}
       >
         {components.map((element, index) => (
-          <SwiperSlide key={index} style={{ width: 'auto' }}>
+          <SwiperSlide key={index}>
             <div className="flex justify-center pb-8 px-2 w-full">
               {element}
             </div>

@@ -11,17 +11,17 @@ const ClasesSection = () => {
 
       <div className="hidden md:flex flex-row justify-center gap-8">
         <BonoCard
-          tituloBono="BONO 1 SESION"
+          tituloBono="BONO 1 <br> SESION"
           precio="10€"
           caracteristicas={[]}
         />
         <BonoCard
-          tituloBono="BONO 5 SESIONES"
+          tituloBono="BONO 5 <br> SESIONES"
           precio="40€"
           caracteristicas={[]}
         />
         <BonoCard
-          tituloBono="BONO 10 SESIONES"
+          tituloBono="BONO 10 <br> SESIONES"
           precio="75€"
           caracteristicas={[]}
         />
