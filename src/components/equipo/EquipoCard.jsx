@@ -16,22 +16,22 @@ const EquipoCard = ({ nombre, descripcion, rol, imagen, especialidades, imagenCl
       />
 
       {/* Contenido */}
-      <div className="flex flex-col w-full h-[210px] py-4 px-2 sm:px-4 gap-4 justify-between 2xl:py-0 2xl:pt-2">
+      <div className="flex flex-col w-full h-full py-4 px-2 sm:px-4 gap-4 justify-between 2xl:pt-2">
         {/* Nombre, rol y descripción */}
-        <div className="flex flex-col gap-2 px-2 2xl:h-[170px]">
+        <div className="flex flex-col gap-2 md:gap-1 px-2 2xl:h-[170px]">
           <h3 className="text-3xl font-bold text-primary text-theme-white text-left">{nombre}</h3>
           <div className="text-sm text-primary-blue tracking-wide">{rol}</div>
           <div className="text-sm text-theme-white font-sans md:text-base">{descripcion}</div>
         </div>
 
         {/* Especialidades */}
-        <div className="flex flex-wrap justify-between w-full gap-1">
+        <div className="flex flex-wrap justify-center w-full gap-1">
           {especialidades.map((spec, i) => (
             <div
               key={i}
-              className="bg-theme-background-gray rounded-full px-2"
+              className="bg-theme-background-gray rounded-full px-2 py-1 w-[30%]"
             >
-              <span className="text-theme-light-gray font-sans text-xs sm:text-[13px] md:text-[15px] xl:text-sm ">
+              <span className="text-theme-light-gray font-sans text-[80%] sm:text-[83%] flex justify-center">
                 {spec}
               </span>
             </div>

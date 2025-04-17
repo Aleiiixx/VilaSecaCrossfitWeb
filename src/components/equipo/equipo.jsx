@@ -34,14 +34,6 @@ const equipo = [
     imagen: "/equipo/borja.webp",
     especialidades: ["Crossfit", "Halterofilia", "Gymnastics"],
   },
-  {
-    nombre: "Johan",
-    descripcion: "Coach de antisocial team y delfín no oficial. Te enseña a nadar, y a no ahogarte.",
-    rol: "Coach de Natación",
-    imagen: "/equipo/johan.jpg",
-    especialidades: ["Natación", "Respirar bajo presión", "Hacer que flotes aunque no quieras"],
-  }
-  
   
 ];
 
