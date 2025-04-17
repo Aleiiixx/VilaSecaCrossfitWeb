@@ -1,7 +1,7 @@
 // src/components/EquipoCard.jsx
 import React from 'react';
 
-const EquipoCard = ({ nombre, descripcion, rol, imagen, especialidades, imagenClasses }) => {
+const EquipoCard = ({ nombre, descripcion, rol, imagen, especialidades}) => {
   return (
     <div className=" h-[460px] sm:h-[480px]  
     sm:w-[300px] 
@@ -10,7 +10,7 @@ const EquipoCard = ({ nombre, descripcion, rol, imagen, especialidades, imagenCl
     flex flex-col bg-theme-dark-gray shadow-lg rounded-2xl overflow-hidden">
       {/* Imagen del coach */}
       <img
-        className={`w-full h-[230px] sm:h-[270px] object-cover ${imagenClasses}`}
+        className="w-full h-[230px] sm:h-[270px] object-cover"
         src={imagen}
         alt={nombre}
       />

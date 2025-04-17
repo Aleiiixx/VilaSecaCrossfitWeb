@@ -41,10 +41,10 @@ const Equipo = () => {
   return (
     <section
       id="nosotros"
-      className="relative flex flex-col w-full overflow-hidden bg-[#F0F0F0] min-h-[90vh] max-h-full justify-center
+      className="relative flex flex-col w-full overflow-hidden bg-[#F0F0F0] min-h-[90vh] max-h-full justify-center items-center
         py-12 px-4 sm:px-8 xl:px-18 2xl:px-4 sm:py-16 md:py-20"
     >
-      <div className="flex justify-center pb-8 sm:gap-4 sm:pb-12">
+      <div className="flex justify-center pb-4 sm:gap-4 sm:pb-12">
         <h2 className="flex-wrap text-theme-dark-gray">
           <span className="text-theme-dark">NUESTRO</span>{" "}
           <span className="text-theme-violet-text">EQUIPO</span>

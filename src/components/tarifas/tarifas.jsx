@@ -6,7 +6,7 @@ import PlanCard from './PlanCard';
 
 const ClasesSection = () => {
   return (
-    <section id="clases" className="relative flex flex-col w-full overflow-hidden py-12 mb-24 gap-6">
+    <section id="tarifas" className="relative flex flex-col w-full overflow-hidden py-12 mb-24 gap-6">
       <h2 className="text-theme-white">ELIGE TU BONO</h2>
 
       <div className="hidden md:flex flex-row justify-center gap-8">
