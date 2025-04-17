@@ -20,4 +20,30 @@ import Horario from '@components/horario/horario.astro';
   <Tarifas client:load/>
   <Horario/>
   <Footer/>
+
+   <!-- Botón "Volver arriba" redondo -->
+   <button
+    id="scrollToTopBtn"
+    class="fixed bottom-4 right-4 w-12 h-12 flex items-center justify-center bg-[#00C8B8] text-white text-xl rounded-full shadow-lg hover:bg-[#00b0a4] transition z-50"
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    aria-label="Volver arriba"
+  >
+    ↑
+  </button>
+
+  <!-- Script para mostrar/ocultar el botón al hacer scroll -->
+  <script is:inline>
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollBtn.style.display = "flex";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    });
+
+    // Inicialmente oculto
+    scrollBtn.style.display = "none";
+  </script>
 </Layout>

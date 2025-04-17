@@ -37,13 +37,13 @@ const clases = [
 
 const Clases = () => {
   return (
-    <section id="clases"
+    <section 
       className="relative flex flex-col w-full overflow-hidden justify-center
         bg-no-repeat bg-right bg-[length:auto_90%] min-h-[90vh] 
         pt-28 pb-20 sm:pt-24 sm:pb-16 md:py-24 px-4 sm:px-8 xl:px-12"
       style={{ backgroundImage: "url('/leonGris.webp')" }}
     >
-      <div
+      <div id="clases"
         className="flex justify-center items-center gap-4 pb-8 sm:py-12 alling-center"
       >
         <h2 className="flex-wrap">
