@@ -31,7 +31,6 @@
       </svg>
     </button>
 
-    <a href="#inicio">INICIO</a>
     <a href="#horario">HORARIOS</a>
     <a href="#tarifas">TARIFAS</a>
     <a href="#clases">CLASES</a>
@@ -45,13 +44,21 @@
   const closeButton = document.getElementById('menu-close');
   const mobileMenu = document.getElementById('mobile-menu');
 
+  const closeMenu = () => {
+    mobileMenu.classList.add('translate-y-[-100%]');
+    mobileMenu.classList.remove('translate-y-0');
+  };
+
   toggleButton.addEventListener('click', () => {
     mobileMenu.classList.remove('translate-y-[-100%]');
     mobileMenu.classList.add('translate-y-0');
   });
 
-  closeButton.addEventListener('click', () => {
-    mobileMenu.classList.add('translate-y-[-100%]');
-    mobileMenu.classList.remove('translate-y-0');
+  closeButton.addEventListener('click', closeMenu);
+
+  // Cierra el menú al hacer clic en cualquier enlace
+  const menuLinks = mobileMenu.querySelectorAll('a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
   });
 </script>
