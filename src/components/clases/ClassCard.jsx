@@ -20,7 +20,7 @@ const ClassCard = ({ titulo, descripcion, imagen }) => {
             <h3 className="text-2xl sm:text-3xl font-bold text-primary text-primary-blue text-left">
               {titulo}
             </h3>
-            <div className="text-sm text-theme-white font-sans">
+            <div className="text-xs md:text-sm text-theme-white font-sans">
               {descripcion}
             </div>
           </div>
