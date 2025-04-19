@@ -1,8 +1,8 @@
 import React from 'react';
 
-const BonoCard = ({ tituloBono, precio, caracteristicas }) => {
+const BonoCard = ({ tituloBono, precio, caracteristicas}) => {
   return (
-    <div className="flex flex-col items-center w-fit min-w-[300px] max-h-[600px] max-w-[450px] bg-white p-1 shadow-lg rounded-2xl overflow-hidden">
+    <div className="flex flex-col items-center w-[400px] md:w-[300px] lg:w-[25%] 2xl:w-[400px] bg-white p-1 shadow-lg rounded-2xl overflow-hidden">
       <div className="w-full h-full rounded-2xl py-4 px-6 gap-4">
         <div className="flex flex-col w-full py-4">
           <h3

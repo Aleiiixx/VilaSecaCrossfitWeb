@@ -31,7 +31,6 @@ const CarouselTarifas = ({ components, theme = 'violet' }) => {
     <div
       style={{
         width: '100%',
-        maxWidth: '900px',
         margin: '0 auto',
         paddingBottom: '4rem',
         position: 'relative',

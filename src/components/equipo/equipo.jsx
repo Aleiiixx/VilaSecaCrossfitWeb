@@ -22,7 +22,7 @@ const equipo = [
   {
     nombre: "Saray",
     descripcion:
-      "Saray, la Srta. Inkisidora. Coach del box, siempre dispuesta a ayudarte a mejorar cada día.",
+      "Saray, Srta. Inkisidora. Coach del box, siempre dispuesta a ayudarte a mejorar cada día.",
     rol: "Coach",
     imagen: "/equipo/saray.webp",
     especialidades: ["Crossfit", "Halterofilia", "Gymnastics"],

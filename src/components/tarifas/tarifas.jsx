@@ -6,7 +6,11 @@ import PlanCard from './PlanCard';
 
 const ClasesSection = () => {
   return (
-    <section id="tarifas" className="relative flex flex-col w-full overflow-hidden py-12 mb-24 gap-6">
+    <section
+      id="tarifas"
+      className="relative flex flex-col w-full overflow-hidden py-12 mb-24 gap-6 bg-no-repeat bg-left bg-[length:auto_90%]"
+      style={{ backgroundImage: "url('/leonGrisFlip.webp')" }}
+    >
       <h2 className="text-theme-white">ELIGE TU BONO</h2>
 
       <div className="hidden md:flex flex-row justify-center gap-8">
@@ -38,26 +42,30 @@ const ClasesSection = () => {
 
       <h2 className="text-theme-white">PLANES MENSUALES</h2>
 
-      <div className="flex-row gap-2 justify-center hidden md:flex">
+      <div className="flex-row gap-2 md:gap-2 lg:gap-4 lg-px-6 justify-center hidden md:flex">
         <PlanCard
           tituloBono="IRON"
           precio="29€"
           caracteristicas={["5 sesiones al mes"]}
+          responsiveWidth="w-full md:w-[270px] lg:w-[22%]"
         />
         <PlanCard
           tituloBono="BRONZE"
           precio="46€"
           caracteristicas={["9 sesiones al mes"]}
+          responsiveWidth="w-full md:w-[270px] lg:w-[22%]"
         />
         <PlanCard
           tituloBono="SILVER"
           precio="57€"
           caracteristicas={["13 sesiones al mes"]}
+          responsiveWidth="w-full md:w-[270px] lg:w-[22%]"
         />
         <PlanCard
           tituloBono="GOLDEN"
           precio="69€"
           caracteristicas={["17 sesiones al mes"]}
+          responsiveWidth="w-full md:w-[270px] lg:w-[22%]"
         />
       </div>
 
