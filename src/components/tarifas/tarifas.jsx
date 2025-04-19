@@ -97,13 +97,10 @@ const ClasesSection = () => {
           alignLeft
         />
         <ExtraCard
-          tituloBono="DIAMOND"
-          precio="79€"
+          tituloBono="EXTRA"
+          precio="+ 10€"
           caracteristicas={[
-            "1 clase de MOBILITY semanal",
-            "1 clase de HALTEROFILIA semanal",
-            "7 sesiones WOD / OPEN semanales",
-            "1 clase de GYMNASTIC semanal",
+            "5 sesiones de programación de 1h complementaria (4 BOX + 1 OUTSIDE)",
           ]}
           descripcionExtra="Los planes Diamond y Morning Diamond tienen disponible:"
         />

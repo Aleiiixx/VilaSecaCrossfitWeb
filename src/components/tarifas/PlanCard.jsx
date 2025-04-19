@@ -3,8 +3,8 @@ import React from 'react';
 
 const PlanCard = ({ tituloBono, precio, caracteristicas, alignLeft = false }) => {
   return (
-    <div className="flex flex-col items-center w-fit min-w-[300px] max-h-[600px] max-w-[450px] bg-theme-dark-gray p-1 shadow-lg rounded-2xl overflow-hidden">
-      <div className="w-full h-full rounded-2xl py-4 px-6 gap-4">
+    <div className="flex flex-col items-center w-[400px] min-w-[300px] max-h-[600px] max-w-[450px] bg-theme-dark-gray p-1 shadow-lg rounded-2xl overflow-hidden">
+      <div className="w-full h-full rounded-2xl py-6 px-6 gap-4">
         <div className="flex flex-col w-full py-4">
           <h3 className="text-3xl font-bold text-theme-white text-center" dangerouslySetInnerHTML={{ __html: tituloBono }}/>
           <div className="flex flex-row justify-center items-end">
