@@ -35,7 +35,7 @@ const CarrouselFamily = () => {
               loading="lazy"
               src={src}
               alt={`family ${index + 1}`}
-              className="w-full h-auto aspect-video object-cover rounded-md shadow-md"
+              className="w-full h-auto aspect-video object-cover sm:rounded-md shadow-md"
             />
           </SwiperSlide>
         ))}
