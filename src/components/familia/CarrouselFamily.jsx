@@ -1,0 +1,46 @@
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import './CarouselFamily.css'
+
+const images = [
+  '/family/family_0.webp',
+  '/family/family_1.jpg',
+  '/family/family_2.jpg',
+];
+
+const CarrouselFamily = () => {
+  return (
+    <div className={`w-full md:w-1/2 max-w-2xl`}>
+      <Swiper
+        spaceBetween={0}
+        slidesPerView={1}
+        centeredSlides={true}
+        grabCursor={true}
+        pagination={{ clickable: true }}
+        navigation={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[Navigation, Pagination, Autoplay]}
+        className={`swiper-family`}
+      >
+        {images.map((src, index) => (
+          <SwiperSlide key={index}>
+            <img
+              src={src}
+              alt={`family ${index + 1}`}
+              className="w-full h-auto aspect-video object-cover rounded-md shadow-md"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
+};
+
+export default CarrouselFamily;

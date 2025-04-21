@@ -11,7 +11,7 @@ const ClasesSection = () => {
       className="relative flex flex-col w-full overflow-hidden py-12 mb-24 gap-6 bg-no-repeat bg-left bg-[length:auto_90%]"
       style={{ backgroundImage: "url('/leonGrisFlip.webp')" }}
     >
-      <h2 className="text-theme-white">ELIGE TU BONO</h2>
+      <h2 className="text-theme-white mb-10">ELIGE TU BONO</h2>
 
       <div className="hidden md:flex flex-row justify-center gap-8">
         <BonoCard
@@ -40,7 +40,7 @@ const ClasesSection = () => {
         />
       </div>
 
-      <h2 className="text-theme-white">PLANES MENSUALES</h2>
+      <h2 className="text-theme-white mb-10 mt-2 md:mt-10">PLANES MENSUALES</h2>
 
       <div className="flex-row gap-2 md:gap-2 lg:gap-4 lg-px-6 justify-center hidden md:flex">
         <PlanCard
