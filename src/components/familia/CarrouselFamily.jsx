@@ -6,11 +6,11 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './CarouselFamily.css'
 
-const images = [
-  '/family/family_0.webp',
-  '/family/family_1.jpg',
-  '/family/family_2.jpg',
-];
+const imageCount = 24; // cantidad de imágenes que tienes
+const startFrom = 0; // empieza desde family_3.webp
+
+const images = Array.from({ length: imageCount }, (_, i) => `/family/family_${i + startFrom}.webp`);
+
 
 const CarrouselFamily = () => {
   return (
@@ -20,7 +20,7 @@ const CarrouselFamily = () => {
         slidesPerView={1}
         centeredSlides={true}
         grabCursor={true}
-        pagination={{ clickable: true }}
+        pagination={{ type: 'fraction' }}
         navigation={true}
         autoplay={{
           delay: 2500,
