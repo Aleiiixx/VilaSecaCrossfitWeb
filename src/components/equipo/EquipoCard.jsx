@@ -12,6 +12,7 @@ const EquipoCard = ({ nombre, descripcion, rol, imagen, especialidades }) => {
       {/* Imagen: 60% */}
       <div className="flex-[6] h-full w-full">
         <img
+          loading='lazy'
           className="w-full h-full object-cover"
           src={imagen}
           alt={nombre}

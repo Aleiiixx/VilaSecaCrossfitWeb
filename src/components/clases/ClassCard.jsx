@@ -11,7 +11,7 @@ const ClassCard = ({ titulo, descripcion, imagen }) => {
 
       <div className="bg-theme-dark-gray w-full h-full rounded-2xl">
         {/* Imagen del coach */}
-        <img src={imagen} alt="" className="w-full h-[65%] object-cover rounded-t-2xl" />
+        <img src={imagen} alt="" className="w-full h-[65%] object-cover rounded-t-2xl" loading="lazy" />
 
         {/* Contenido */}
         <div className="flex flex-col w-full py-2 px-6">
