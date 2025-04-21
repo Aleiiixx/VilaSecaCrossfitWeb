@@ -22,14 +22,16 @@ import Horario from '@components/horario/horario.astro';
   <Footer/>
 
    <!-- Botón "Volver arriba" redondo -->
-   <button
+   <!-- Botón "Volver arriba" solo con imagen (con flecha incluida en la imagen) -->
+  <button
     id="scrollToTopBtn"
-    class="fixed bottom-4 right-4 w-12 h-12 flex items-center justify-center bg-[#00C8B8] text-white text-xl rounded-full shadow-lg hover:bg-[#00b0a4] transition z-50"
+    class="fixed bottom-4 right-4 w-14 h-14 rounded-full shadow-lg transition z-50 p-0 border-none bg-transparent"
     onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
     aria-label="Volver arriba"
-  >
-    ↑
+    >
+    <img src="buttonketellbell.png" alt="Volver arriba" class="w-full h-full object-contain" />
   </button>
+
 
   <!-- Script para mostrar/ocultar el botón al hacer scroll -->
   <script is:inline>
