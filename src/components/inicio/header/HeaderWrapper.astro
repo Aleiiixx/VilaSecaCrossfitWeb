@@ -1,0 +1,15 @@
+---
+// src/components/header/HeaderWrapper.astro
+import HeaderDesktop from "./HeaderDesktop.astro";
+import HeaderMobile from "./HeaderMobile.astro";
+---
+
+<!-- Header móvil: visible solo en pantallas pequeñas -->
+<div class="md:hidden sticky top-0 z-50">
+  <HeaderMobile />
+</div>
+
+<!-- Header escritorio: visible en pantallas medianas en adelante -->
+<div class="hidden md:block">
+  <HeaderDesktop />
+</div>

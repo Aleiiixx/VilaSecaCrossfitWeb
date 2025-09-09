@@ -1,0 +1,12 @@
+---
+import Layout from '@layouts/Layout.astro';
+import HeaderWrapper from '@components/inicio/header/HeaderWrapper.astro';
+import ClasesSection from '@components/clases/clases.jsx';
+import Footer from '@components/footer/footer.astro';
+---
+
+<Layout>
+  <HeaderWrapper slot="header" />
+  <ClasesSection client:load />
+  <Footer slot="footer" />
+</Layout>

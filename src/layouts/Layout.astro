@@ -4,36 +4,40 @@ import "../styles/global.css";
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Vila-seca CrossFit | Tu box de confianza</title>
-		<meta name="description" content="Entrena CrossFit en Vila-seca con profesionales. Halterofilia, movilidad, y comunidad desde 2022, adaptados a todos los niveles">
-		<meta property="og:title" content="Vila-seca CrossFit">
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://www.vilasecacrossfit.com/">
-		<meta property="og:description" content="Entrena CrossFit en Vila-seca con profesionales.">
-		<link rel="shortcut icon" type="image/x-icon" href="/icono.ico" />
-		<script type="application/ld+json">
-			{
-				"@context": "https://schema.org/",
-				"@type": "LocalBusiness",
-				"name": "BOX VILA-SECA S.L",
-				"image": "https://www.vilasecacrossfit.com/smarty/customWireframe/media/images/photo-microdata.jpg",
-				"address": {
-					"@type": "PostalAddress",
-					"streetAddress": "Av. de la Generalitat, 88",
-					"postalCode": "43480",
-					"addressLocality": "Vila-seca",
-					"addressCountry": "ES"
-				},
-				"telephone": "618434374",
-				"email": "vilasecacrossfit@gmail.com",
-				"vatID": "B67690602"
-			}
-		</script>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vila-seca CrossFit | Tu box de confianza</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+
+    <!-- Slot para que cada página ponga su header -->
+    <slot name="header" />
+
+    <!-- Contenido de la página -->
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <!-- Footer común -->
+    <slot name="footer" />
+
+    <!-- Botón scroll-to-top -->
+    <button
+      id="scrollToTopBtn"
+      class="fixed bottom-4 right-4 w-14 h-14 rounded-full transition z-50 p-0 border-none bg-transparent"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      aria-label="Volver arriba"
+    >
+      <img src="/buttonkettelbell.png" alt="Volver arriba" class="w-full h-full object-contain" />
+    </button>
+
+    <script is:inline>
+      const scrollBtn = document.getElementById("scrollToTopBtn");
+      window.addEventListener("scroll", () => {
+        scrollBtn.style.display = window.scrollY > 300 ? "flex" : "none";
+      });
+      scrollBtn.style.display = "none";
+    </script>
+  </body>
 </html>

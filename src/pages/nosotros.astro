@@ -1,0 +1,13 @@
+---
+import Layout from '@layouts/Layout.astro';
+import FamiliaSection from '@components/familia/familia.astro';
+import CoachSection from '@components/equipo/equipo.jsx';
+import Footer from '@components/footer/footer.astro';
+import HeaderWrapper from '@components/inicio/header/HeaderWrapper.astro';
+---
+<Layout>
+  <HeaderWrapper slot="header" />
+  <CoachSection client:load/>
+  <FamiliaSection client:load showWave={false}/>
+  <Footer slot="footer"/>
+</Layout>

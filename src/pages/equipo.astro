@@ -1,0 +1,12 @@
+---
+import Layout from '@layouts/Layout.astro';
+import EquipoSection from '@components/equipo/equipo.jsx';
+import Footer from '@components/footer/footer.astro';
+import HeaderWrapper from '@components/inicio/header/HeaderWrapper.astro';
+
+---
+<Layout>
+  <HeaderWrapper slot="header" />
+  <EquipoSection client:load />
+  <Footer slot="footer" />
+</Layout>

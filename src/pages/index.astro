@@ -14,14 +14,13 @@ import Horario from '@components/horario/horario.astro';
 
 <Layout>
   <Inicio/>
-  <Familia/>
+  <Familia showWave={true}/>
   <Clases client:load/>
   <Equipo client:load/>
   <Tarifas client:load/>
-  <Horario/>
+  <Horario showWave={true} />
   <Footer/>
-
-  <button
+<button
     id="scrollToTopBtn"
     class="fixed bottom-4 right-4 w-14 h-14 rounded-full transition z-50 p-0 border-none bg-transparent cursor-pointer"
     onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"

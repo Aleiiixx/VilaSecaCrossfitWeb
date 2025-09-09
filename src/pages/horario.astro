@@ -1,0 +1,11 @@
+---
+import Layout from '@layouts/Layout.astro';
+import HorarioSection from '@components/horario/horario.astro';
+import Footer from '@components/footer/footer.astro';
+import HeaderWrapper from '@components/inicio/header/HeaderWrapper.astro';
+---
+<Layout>
+   <HeaderWrapper slot="header" />
+  <HorarioSection showWave={false} />
+  <Footer slot="footer" />
+</Layout>
